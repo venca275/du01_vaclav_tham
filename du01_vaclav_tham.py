@@ -1,4 +1,4 @@
-from turtle import circle, forward, left, right, exitonclick
+from turtle import circle, forward, left, pendown, penup, right, exitonclick
 #Sloupce
 x=3
 #Radky
@@ -21,5 +21,20 @@ for _ in range(y):
 	right(90)
 	forward(a)
 	right(90)
-
+print("Začíná hra jako první jde hráč ",j,)
+radka= int(input("Zadej řádku "))
+sloupec= int(input("Zadej sloupec "))
+penup()
+forward(4)
+right(90)
+forward(radka * a - 15)
+pendown()
+circle(11)
+penup()
+right(90)
+forward(4)
+right(90)
+forward(radka * a - 15)
+right(90)
+pendown()
 exitonclick()
