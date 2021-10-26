@@ -10,6 +10,7 @@ j= input("Zadej jmeno prvniho hrace: ")
 k= input("Zadej jmeno druheho hrace: ")
 print ("V tomto duelu proti sobe nastoupí ", j ,"a ", k ,".")
 print("Tato hra piskvorek je v poli ",x,"x",y)
+#Vykreslení hracího pole (síťe)
 for _ in range(y):
 	for _ in range(x):
 		for _ in range(4):
@@ -20,7 +21,8 @@ for _ in range(y):
 	forward(x*a)
 	right(90)
 	forward(a)
-	right(90) 
+	right(90)
+#Teď přijde na řadu první tah, která je mimo cyklus a bude proveden pouze pokud je počet políček lichý
 print("Začíná hra jako první jde hráč ",j,)
 radka= int(input("Zadej řádku "))
 sloupec= int(input("Zadej sloupec "))
@@ -37,7 +39,9 @@ right(90)
 forward(radka * a - 15)
 right(90)
 pendown()
+#Cyklus pro sudý počet políček, Střídají se dva hráči
 for f in range(4):
+#Vykreslení křížku
 	print(" Ted je na řadě hráč ",k,)
 	radka= int(input("Zadej řádku "))
 	sloupec= int(input("Zadej sloupec "))
@@ -73,6 +77,7 @@ for f in range(4):
 	left(90)
 	forward(radka * a - a)
 	right(90)
+#Vykreslení kolečka
 	print("Teď je na řadě hráč ",j,)
 	radka= int(input("Zadej řádku "))
 	sloupec= int(input("Zadej sloupec "))
