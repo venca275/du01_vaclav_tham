@@ -7,8 +7,8 @@ j= input("Zadej jmeno prvniho hrace: ")
 k= input("Zadej jmeno druheho hrace: ")
 print ("V tomto duelu proti sobe nastoupí ", j ,"a ", k ,".")
 #zvolime si velikost hraciho pole
-x=int(input("Zadej počet sloupcu"))
-y=int(input("Zadej počet řádků"))
+x=int(input("Zadej počet sloupcu "))
+y=int(input("Zadej počet řádků "))
 print("Tato hra piskvorek je v poli ",x,"x",y)
 nasobek=int(x * y)
 #Vykreslení hracího pole (síťe)
@@ -23,7 +23,7 @@ for _ in range(y):
 	right(90)
 	forward(a)
 	right(90)
-#Teď přijde na řadu první tah, která je mimo cyklus a bude proveden pouze pokud je počet políček lichý
+#Teď přijde na řadu cyklus, která proběhne pokud je počet všech polí sudý
 if (nasobek%2==0):
 	opakovani=int((nasobek)/2)	
 	for f in range(opakovani):
@@ -80,6 +80,7 @@ if (nasobek%2==0):
 		forward(radka * a - 15)
 		right(90)
 		pendown()
+#Teď přijde na řadu cyklus, která proběhne pokud je počet všech polí lichý
 else:
 	opakovani=int((nasobek-1)/2)
 	for f in range(opakovani):
@@ -136,7 +137,7 @@ else:
 		forward(radka * a - 15)
 		right(90)
 		pendown()
-	#Vykreslení křížku
+	#Vykreslení křížku (Jeden tah navíc prvního hráče jelikož je počet tahů lichý)
 	print(" Ted je na řadě hráč ",k,)
 	radka= int(input("Zadej řádku "))
 	sloupec= int(input("Zadej sloupec "))
@@ -172,4 +173,5 @@ else:
 	left(90)
 	forward(radka * a - a)
 	right(90)
+print("Konec hry")
 exitonclick()
