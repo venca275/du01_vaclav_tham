@@ -30,7 +30,13 @@ if (nasobek%2==0):
 #Vykreslení křížku
 		print(" Ted je na řadě hráč ",k,)
 		radka= int(input("Zadej řádku "))
+		while (radka<1) or (radka>y):
+			print("Zadal jsi špatnou řádku")
+			radka= int(input("Zadej řádku "))
 		sloupec= int(input("Zadej sloupec "))
+		while (sloupec<1) or (sloupec>y):
+			print("Zadal jsi špatný sloupec")
+			sloupec= int(input("Zadej sloupec "))
 		penup()
 		forward(sloupec * a - a)
 		right(90)
@@ -66,7 +72,13 @@ if (nasobek%2==0):
 #Vykreslení kolečka
 		print("Teď je na řadě hráč ",j,)
 		radka= int(input("Zadej řádku "))
+		while (radka<1) or (radka>y):
+			print("Zadal jsi špatnou řádku")
+			radka= int(input("Zadej řádku "))
 		sloupec= int(input("Zadej sloupec "))
+		while (sloupec<1) or (sloupec>y):
+			print("Zadal jsi špatný sloupec")
+			sloupec= int(input("Zadej sloupec "))
 		penup()
 		forward(sloupec * a - 26)
 		right(90)
@@ -87,7 +99,13 @@ else:
 #Vykreslení křížku
 		print(" Ted je na řadě hráč ",k,)
 		radka= int(input("Zadej řádku "))
+		while (radka<1) or (radka>y):
+			print("Zadal jsi špatnou řádku")
+			radka= int(input("Zadej řádku "))
 		sloupec= int(input("Zadej sloupec "))
+		while (sloupec<1) or (sloupec>y):
+			print("Zadal jsi špatný sloupec")
+			sloupec= int(input("Zadej sloupec "))
 		penup()
 		forward(sloupec * a - a)
 		right(90)
@@ -123,7 +141,13 @@ else:
 #Vykreslení kolečka
 		print("Teď je na řadě hráč ",j,)
 		radka= int(input("Zadej řádku "))
+		while (radka<1) or (radka>y):
+			print("Zadal jsi špatnou řádku")
+			radka= int(input("Zadej řádku "))
 		sloupec= int(input("Zadej sloupec "))
+		while (sloupec<1) or (sloupec>y):
+			print("Zadal jsi špatný sloupec")
+			sloupec= int(input("Zadej sloupec "))
 		penup()
 		forward(sloupec * a - 26)
 		right(90)
@@ -140,7 +164,13 @@ else:
 	#Vykreslení křížku (Jeden tah navíc prvního hráče jelikož je počet tahů lichý)
 	print(" Ted je na řadě hráč ",k,)
 	radka= int(input("Zadej řádku "))
+	while (radka<1) or (radka>y):
+		print("Zadal jsi špatnou řádku")
+		radka= int(input("Zadej řádku "))
 	sloupec= int(input("Zadej sloupec "))
+	while (sloupec<1) or (sloupec>y):
+		print("Zadal jsi špatný sloupec")
+		sloupec= int(input("Zadej sloupec "))
 	penup()
 	forward(sloupec * a - a)
 	right(90)
