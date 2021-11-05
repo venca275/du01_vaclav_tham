@@ -8,11 +8,14 @@ hrac2= input("Zadej jmeno druheho hrace: ")
 print ("V tomto duelu proti sobe nastoupí ", hrac1 ,"a ", hrac2 ,".")
 #zvolime si velikost hraciho pole
 pocetsloupcu=int(input("Zadej počet sloupcu "))
+#Ošetření chybných vstupů
 while pocetsloupcu<1:
 	pocetsloupcu=int(input("Zadal si chybnou hodnotu, zadej znovu počet sloupců "))
 pocetradek=int(input("Zadej počet řádků "))
+#Ošetření chybných vstupů
 while pocetradek<1:
 	pocetradek=int(input("Zadal si chybnou hodnotu, zadej znovu počet řádek "))
+#Přiřazení počtu políček do proměnné
 print("Tato hra piskvorek je v poli ",pocetsloupcu,"x",pocetradek)
 nasobek=int(pocetsloupcu * pocetradek)
 #Vykreslení hracího pole (síťe)
@@ -28,7 +31,7 @@ for _ in range(pocetradek):
 	right(90)
 	forward(stranactverce)
 	right(90)
-#Ošetření počtu v lichý/sudý
+#Ošetření počtu tahů(lichý/sudý počet políček)
 if (nasobek%2==0):
 	opakovani=int((nasobek)/2)
 else:
