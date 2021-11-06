@@ -1,10 +1,13 @@
 from turtle import circle, forward, left, pendown, penup, right, exitonclick, speed
 #Program na hru piškvorky. Měl by splňovat funkčnost pro korektní vstupy, libovolná velikost pole.
-#Strana ctverce
-stranactverce=30
 print("Ahoj právě si otevřel piškvorky")
-print("Budeš vyzván, abys zadal velikost pole")
 
+#velikost strany ctverce
+stranactverce=int(input("Zadej velikost strany ctverce "))
+while stranactverce < 1:
+	stranactverce=int(input("Zadal si zapornou velikost, zadej prosím znovu a kladné hodnoty"))
+
+print("Budeš vyzván, abys zadal velikost pole")
 #zvolime si velikost hraciho pole
 pocetsloupcu=int(input("Zadej počet sloupcu "))
 #Ošetření chybných vstupů
@@ -57,25 +60,27 @@ for f in range(nasobek):
 		pendown()
 		
 		#Vykreslení křížku
+		penup()
 		left(90)
 		right(45)
-		forward(4)
+		forward(stranactverce/4)
 		pendown()
-		forward(38)
+		forward(stranactverce)
 		right(180)
-		forward(19)
+		forward(stranactverce/2)
 		right(90)
-		forward(19)
+		forward(stranactverce/2)
 		right(180)
 		penup()
-		forward(19)
+		forward(stranactverce/2)
 		pendown()
-		forward(19)
+		forward(stranactverce/2)
 		right(180)
 		penup()
-		forward(19)
+		forward(stranactverce/2)
 		left(90)
-		forward(23)
+		forward(stranactverce/2)
+		forward(stranactverce/4)
 		right(135)
 		pendown()
 		left(180)
@@ -90,20 +95,20 @@ for f in range(nasobek):
 	else:
 		#Přesun na pozici
 		penup()
-		forward(sloupec * stranactverce - 26)
+		forward(sloupec * stranactverce - stranactverce + (stranactverce/6))
 		right(90)
-		forward(radka * stranactverce - 15)
+		forward(radka * stranactverce - (stranactverce/2))
 		pendown()
 		
 		#Vykreslení kolečka
-		circle(11)
+		circle(stranactverce/3)
 		
 		#Přesun zpět na začátek
 		penup()
 		right(90)
-		forward(sloupec * stranactverce - 26)
+		forward(sloupec * stranactverce - stranactverce + (stranactverce/6))
 		right(90)
-		forward(radka * stranactverce - 15)
+		forward(radka * stranactverce - (stranactverce/2))
 		right(90)
 		pendown()			
 print("Konec hry")
