@@ -46,7 +46,7 @@ for f in range(nasobek):
 		radka= int(input("Zadej řádku "))
 	sloupec= int(input("Zadej sloupec "))
 	#Ošetření chybných vstupů
-	while (sloupec<1) or (sloupec>pocetradek):
+	while (sloupec<1) or (sloupec>pocetsloupcu):
 		print("Zadal jsi špatný sloupec")
 		sloupec= int(input("Zadej sloupec "))
 	
